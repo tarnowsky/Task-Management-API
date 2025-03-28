@@ -31,7 +31,28 @@ const loginValidation = data => {
     return schema.validate(data);
 };
 
+const taskValidation = data => {
+    const schema = joi.object({
+        title: joi.string()
+            .min(3)
+            .max(100)
+            .required(),
+        description: joi.string()
+            .max(500)
+            .optional(),
+        status: joi.string()
+            .valid('todo', 'in-progress', 'done')
+            .optional(),
+        priority: joi.string()
+            .valid('low', 'medium', 'high')
+            .optional()
+    });
+
+    return schema.validate(data);
+}
+
 module.exports = {
     registerValidation,
     loginValidation,
+    taskValidation
 };
