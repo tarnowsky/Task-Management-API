@@ -5,13 +5,13 @@ const TaskSchema = mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        minlenght: 3,
-        maxlenght: 100,
+        minlength: 3,
+        maxlength: 100,
     },
     description: {
         type: String,
         trim: true,
-        maxlenght: 500,
+        maxlength: 500,
     },
     status: {
         type: String,
