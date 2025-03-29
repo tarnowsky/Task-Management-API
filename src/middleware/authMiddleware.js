@@ -1,7 +1,5 @@
-const { verify } = require('jsonwebtoken');
 const { verifyToken } = require('../config/jwt');
 const User = require('../models/User');
-const { model } = require('mongoose');
 
 const authMiddleware = async (req, res, next) => {
     const authHeader = req.header('Authorization');
