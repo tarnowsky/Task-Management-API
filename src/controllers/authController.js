@@ -13,15 +13,15 @@ const registerUser = async (req, res) => {
     const {username, email, password} = req.body;
 
     try {
-        const existingEmail = await User.findOne({email});
+        const existingEmail = await User.findOne({ email });
         if (existingEmail) {
             return res.status(400).json({
                 message: 'Email already exists',
             });
         }
 
-        const existngUsername = await User.findOne({username});
-        if (existngUsername) {
+        const existingUsername = await User.findOne({ username });
+        if (existingUsername) {
             return res.status(400).json({
                 message: 'Username already exists',
             });
@@ -33,7 +33,7 @@ const registerUser = async (req, res) => {
             password
         });
 
-        await User.save(user);
+        await user.save(user);
     
         const token = generateToken(user);
 
@@ -76,6 +76,11 @@ const loginUser = async (req, res) => {
             return res.status(400).json({
                 message: 'Invalid credentials'
             });
+        }
+
+        const isMatch = await user.isValidPassword(password);
+        if (!isMatch) {
+            return res.status(400).json({ message: 'Invalid credentials' });
         }
 
         const token = generateToken(user);

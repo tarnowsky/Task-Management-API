@@ -1,23 +1,25 @@
 {
   "name": "task-management-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Michal Tarnowski",
+  "license": "MIT",
+  "description": "Task Management API with JWT Authentication",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.13.1"
+    "mongoose": "^8.13.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "joi": "^17.13.3",
     "nodemon": "^3.1.9"
   }
 }

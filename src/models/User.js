@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const UserSchema = new mongoose.Schema({
     username: {
@@ -25,7 +26,7 @@ const UserSchema = new mongoose.Schema({
     timestamps: true // Automatically adds createdAt and updatedAt fields
 });
 
-UserSchema.pre('save', async (next) => {
+UserSchema.pre('save', async function (next) {
     if (!this.isModified('password')) return next();
 
     try {
