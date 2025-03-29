@@ -1,6 +1,6 @@
 # Task Management API
 
-A modern, RESTful API for task management built with Node.js, Express, and MongoDB.
+RESTful API for task management built with Node.js, Express, and MongoDB.
 
 ## Features
 
