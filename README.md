@@ -1,5 +1,12 @@
 # Task Management API
 
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![bcrypt](https://img.shields.io/badge/bcrypt-00A4CC?style=for-the-badge&logo=security&logoColor=white)
+![Joi](https://img.shields.io/badge/Joi-FF9900?style=for-the-badge&logo=javascript&logoColor=white)
+
 RESTful API for task management built with Node.js, Express, and MongoDB.
 
 ## Features
@@ -51,28 +58,28 @@ task-management-api/
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/task-management-api.git
-   cd task-management-api
-   ```
+  ```bash
+  git clone https://github.com/yourusername/task-management-api.git
+  cd task-management-api
+  ```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+  ```bash
+  npm install
+  ```
 
 3. Create a `.env` file in the root directory:
-   ```
-   MONGODB_URI=mongodb://localhost:27017/task_management_db
-   JWT_SECRET=your_very_long_and_complex_secret_key_here
-   JWT_EXPIRES_IN=1h
-   PORT=3000
-   ```
+  ```
+  MONGODB_URI=mongodb://localhost:27017/task_management_db
+  JWT_SECRET=your_very_long_and_complex_secret_key_here
+  JWT_EXPIRES_IN=1h
+  PORT=3000
+  ```
 
 4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+  ```bash
+  npm run dev
+  ```
 
 ## API Endpoints
 
@@ -112,9 +119,9 @@ POST /api/auth/register
   "message": "User registered successfully",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "user": {
-    "id": "60f1a5c5c5b5e91234a56789",
-    "username": "johndoe",
-    "email": "john@example.com"
+   "id": "60f1a5c5c5b5e91234a56789",
+   "username": "johndoe",
+   "email": "john@example.com"
   }
 }
 ```
